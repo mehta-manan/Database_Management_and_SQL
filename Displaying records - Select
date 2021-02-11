@@ -1,0 +1,46 @@
+• SELECT
+This command is used to read or fetch the records from the table and display.
+
+Command to display table/ all columns:
+Mysql> SELECT * FROM TableName;
+Mysql> SELECT * FROM DatabaseName.TableName;
+
+Command to display specified columns:
+Mysql> SELECT ColumnOne, ColumnTwo FROM TableName;
+
+Command to display columns when restriction is on records:
+Mysql> SELECT * FROM TableName WHERE ColumnName >= 20000;
+
+Command to display distinct records / stop duplication or redundancy:
+Mysql> SELECT DISTINCT ColumnName FROM TableName; 
+
+List of values
+Mysql> … WHERE ColumnName IN (10, 20, 30);
+Mysql> … WHHERE ColumnName = 10 OR ColumnName = 20 OR  ColumnName = 30;
+Pattern matching
+Mysql> SELECT * FROM TableName LIKE ‘%Name’;
+					           ‘Name%’;
+					           ‘%Name%’;
+					           ‘Name__’;
+					           ‘_Name_’;
+					           ‘_Name%’;
+Note: SELECT 2*3;		Output: 5
+      SELECT 2+3 from Anything; (Anything is dummy table with 1 row and 1 column)
+
+Column Alias
+Mysql> SELECT ColumnName, 2*AnotherColumn AS ‘AliasColumn’ FROM TableName;
+
+Group functions: These are the functions which works on the whole table or column at a time and gives only one output. There are five group functions and are divided into Single and Multi / Aggregate / Group.
+Sum:     Mysql> SELECT sum(ColumnName) from TableName;
+Minimum: Mysql> SELECT min(ColumnName) from TableName;
+Maximum: Mysql> SELECT max(ColumnName) from TableName;
+Average: Mysql> SELECT avg(ColumnName) from TableName;
+
+Count(ColumnName) counts the total non-null values in a Column.
+Count(*) counts the total number of records in a Column.
+
+Group by: This clause is used to divide the table in small groups on the basis of column and gives output per group. Example:
+Query to display department wise total number of employees:
+Mysql> SELECT deptno, COUNT(*), max(sal) FROM emp GROUP BY deptno;
+Query to display the average salary of only those departments where average salary is less than 20000:
+Mysql> SELECT deptno, avg(sal) FROM emp GROUP BY deptno HAVING avg(sal) <20000.
