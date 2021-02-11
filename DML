@@ -1,0 +1,30 @@
+Data Manipulation Language
+
+• INSERT
+This command is used to add new record in the table. 
+
+Command to add record:
+Mysql> INSERT INTO TableName VALUES(1, ‘name’, 2000, 10 … );
+Mysql> INSERT INTO TableName VALUES(1, ‘name’, null, 10 … );
+Mysql> INSERT INTO TableName(Number, Name, Deptno) VALUES(1, ‘name’, 10 );
+
+Command to copy contents of table into another table:
+Mysql> INSERT INTO FirstTable SELECT * FROM SecondTable;
+
+• UPDATE
+This command is used to make changes in the existing records
+
+Mysql> UPDATE TableName SET ColumnnName = ColumnName + 0.05*ColumnName;
+Mysql> UPDATE TableName SET ColumnnName = ColumnName + 0.05*ColumnName 
+       WHERE AnotherColumn = 10;
+Mysql> UPDATE TableName SET ColumnnName = ColumnName + 0.05*ColumnName 
+       WHERE AnotherColumn IS NULL;
+
+• DELETE
+This command is used to delete existing selected records.
+
+Command to delete all records:
+Mysql> DELETE FROM Tablename;
+
+Command to delete using condition:
+Mysql> DELETE FROM TableName WHERE ColumnName = 10;
