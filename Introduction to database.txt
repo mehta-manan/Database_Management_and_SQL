@@ -1,0 +1,48 @@
+Database management system and SQL
+
+DBMS: It is a software which is used to create, delete, and manipulate database. 
+      It has different types.
+      RDBMS is one of its type, where R stands for relational.
+      Relation means table. 
+      Since data is stored in tables in it, that’s why it’s known as RDBMS. 
+      For example: MySQL, Oracle, MYSQLServer, MSAccess.
+
+Database: Collection of related tables.
+
+Table: It is a collection of rows and columns. Data is stored in form of records in it, so we can say table is collection of related records.
+
+Rows / Records / Tuple: Set of related values.
+Cardinality: Total number of rows or records.
+
+Columns / Fields / Attributes
+Degree: Total number of columns in any table.
+
+Domain of any column: It is a set of values from where only that column will take particular value.
+
+Keys: Unique columns of a table are called keys. There are 4 types of keys:
+  > Candidate keys: Set of all unique columns or keys in a table are called candidate keys.
+  > Primary key: Column (or set of columns) which uniquely identifies a record. From the candidate keys, any one key can become primary key.
+    Features of primary key:
+    > There can only be one primary key in a table.
+    > Primary key cannot have null value.
+  > Alternate keys: From the candidate keys, one key is taken as primary key and rest keys are called as alternate keys.
+  > Foreign key: A column which is primary key in one table, but a non-primary key in another table is known as foreign key of that table (in which it is non- primary). 
+                 It is used to implement data security so that any or no record is deleted by mistake or updated. This is called as Referential Integrity. 
+                 Foreign key column can have only those values which are present in corresponding primary key column. 
+                 A table can have one primary key but multiple foreign keys.
+
+SQL- Structured Query Language
+SQL is a language which is used to communicate with any relational database. SQL commands are divided into three categories:
+DDL ( Data Definition Language ) : These commands work on the structure of the table.
+  > Create
+  > Drop
+  > Alter
+DML ( Data Manipulation Language ) : These commands are used to manipulate record.
+  > Insert
+  > Delete
+  > Update
+  > Select
+TCL ( Transaction Control Language )
+  > Commit 
+  > Rollback
+  > Saveprint
