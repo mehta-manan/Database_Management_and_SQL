@@ -19,11 +19,11 @@ Mysql> … WHERE ColumnName IN (10, 20, 30);
 Mysql> … WHHERE ColumnName = 10 OR ColumnName = 20 OR  ColumnName = 30;
 Pattern matching
 Mysql> SELECT * FROM TableName LIKE ‘%Name’;
-					           ‘Name%’;
-					           ‘%Name%’;
-					           ‘Name__’;
-					           ‘_Name_’;
-					           ‘_Name%’;
+				      ‘Name%’;
+				      ‘%Name%’;
+				      ‘Name__’;
+				      ‘_Name_’;
+				      ‘_Name%’;
 Note: SELECT 2*3;		Output: 5
       SELECT 2+3 from Anything; (Anything is dummy table with 1 row and 1 column)
 
